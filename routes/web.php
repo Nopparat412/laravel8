@@ -77,14 +77,20 @@ Route::get("/hello", function () {
         $cat = "http://www.onyxtruth.com/wp-content/uploads/2017/06/black-panther-movie-onyx-truth.jpg";
         return view("test/cat", compact("cat"));
     });
-    
+    Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get("/teacher" , function (){
         return view("teacher");
     });
-    
     Route::get("/student" , function (){
         return view("student");
     });
+});
+    // Route::middleware(['auth'])->group(function () {
+    //     Route::get('/teacher', function () {
+    //         return view('teacher/index');
+    //     });
+        
+    //     });
     
     Route::get("/theme" , function (){
         return view("theme");
