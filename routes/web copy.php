@@ -179,9 +179,3 @@ Route::post("study-match", [ QuizController::class, "match" ])->name("study-matc
 // Route::delete("/product/{id}", [StaffController::class, "destroy"])->name('staff.destroy');
 
 Route::resource('/staff', StaffController::class );
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__ . '/auth.php';
