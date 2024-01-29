@@ -191,7 +191,8 @@ return [
 
     'aliases' => [
         'Form' => Collective\Html\FormFacade::class,
-   'HTML' => Collective\Html\HtmlFacade::class,
+        'HTML' => Collective\Html\HtmlFacade::class,
+     
 
 
         'App' => Illuminate\Support\Facades\App::class,
